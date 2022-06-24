@@ -1,0 +1,146 @@
+<!--No site http://mobileinputtypes.com/, mostra qual o tipo certo para aparecer um resultado melhor quando o usuário precisa preencher um campo, por exemplo, identificando como email o teclado do celular já aparece automáticamente com o @ e .com, quando coloca tel, o teclado aparece somente os números e assim por diante. Melhora muuito a usabilidade, pq o suário vai gastar menos tempo tento que digitar menos.-->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contatos - Barbearia Alura</title>
+    <!--A importancia do reset.css:
+        O navegador cria o estilo para todas as tags que ele acha adequadas, então precisamos removê-lo, para que o estilo que criamos não seja influenciado pelo estilo que o navegador adiciona.-->
+    <link rel="stylesheet" href="reset.css\reset.css">
+    <link rel="stylesheet" href="style-produtos.css">
+    <!--CSS importando a forte Montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--como clocar uma imagem no cabeçalho
+            Explicação do professor: envolve a tag 
+            da imagem, que é onde buscamos o conteúdo 
+            que será exibido.-->
+        <div class="caixa">
+            <!--Usamos o alt para fazer uma breve descrição do que é a imagem e assim dar mais acessibilidade-->
+            <h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+
+            <nav>
+                <ul>
+                    <!--A TAG a, é a TAG ancora, ela leva uma página para a outra.
+                        Explicação do Professor:
+                        serve justamente como uma âncora, um link, que vai nos levar para outro ponto na internet.-->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contatos.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main class="centralizando">
+        <!--Pra quê serve um formulário?
+        Um formulário pode servir para, entre outras coisas, enviar os dados para uma outra página, capturar informações que o usuário digitar e enviar dados para um servidor.-->
+        <form class="formulario">
+            <label for="nome-sobrenome">Nome e Sobrenome:</label>
+            <!--Label é o nome da etiqueta, nome do campo da entrada de dados.
+                Required transforma em um campo de preenchimento obrigatório-->
+            <input type="text" id="nome-sobrenome" class="input-padrao" required>
+            <!--tag para entrada de dados, que no caso vai ser a entrada de um nome, então o tipo dela vai ser text-->
+            <label for="email">Email:</label>
+            <!--O placeholder é um exemplo de como você quer que o usuário preencha o campo.-->
+            <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX - XXXX">
+
+            <label for="mensagem">Mensagem:</label>
+            <!--tag de conteúdo que permite o usuário digitar mais de uma linha.
+                As cols(colunas) e rows(linhas) nos ajudam a definir o tamanho que queremos.-->
+            <textarea cols="60" rows="10" id="mensagem" class="input-padrao" required></textarea>
+            <!--A TAG fieldset serve para agrupar inputs de forma mais organizada.-->
+            <fieldset>
+                <!--Ao invés de usarmos parágrafos dentro do fieldset usamos legend. 
+                    Explicação do teacher:
+                    A tag <legend> que usamos para um título de um grupo de campos em qualquer formulário.-->
+                <legend>Como prefere o nosso contato?</legend>
+                <!--radio box, esse campo nos possibilita selecionar uma opção, em um único campo.-->
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+
+
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone"
+                           id="radio-telefone">Telefone</label>
+                <!--O name contato faz com que só consiga marcar uma opção por vez, sem ele o usuário poderá marcar todos de uma vez.
+                    Explicação do Teacher: A propriedade name só pode ser "preenchida" uma única vez, por isso que, quando eu seleciono um dos itens, ele desmarca o outro, mantendo somente um selecionado.-->
+
+                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp"
+                           checked>WhatsApp</label>
+                <!--O checked faz com que uma opção fique marda por padrão, pq assim voce sujere ao usuario o que você quer.-->
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Qual o horário prefere ser atendido?</legend>
+                <!--A estrutura da tag <select> é composta de um ou mais <option>.
+                    O <option serve para criarmos os itens selecionáveis de um <select>-->
+                <select>
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+            </fieldset>
+
+            <!--aqui podemos ver que podemos fazer um label com input juntos e não precisamos criar um for e um id para se comunicarem-->
+            <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por
+                email?</label>
+
+            <input type="submit" value="Enviar formulário" class="botao-enviar">
+            <!--o input sumit é responsável por enviar os dados.
+                O value garante que o nome do campo apareça corretamente, pois se o arqui html não estiver em português o navegador vai ler como o padrão dele, por exemplo, se o navegador estiver em inglês vai aparecer send e não enviar.-->
+        </form>
+        <!--form, tag para criar formulários.-->
+
+        <table>
+            <!--thead cabeçalho da tabela, ajuda a deixar o código mais semantico-->
+            <thead>
+                <!--geralmente a primeira linha de uma tabela
+                é o nome dos campos, o cabeçalho das 
+                informações da tabela.
+                tr são as linhas e td as colunas-->
+                <tr>
+                    <th>Dia</th>
+                    <th>Horários</th>
+                </tr>
+            </thead>
+            <!--tbody cabeçalho da tabela, ajuda a deixar
+            o código mais semantico-->
+            <tbody>
+                <tr>
+                    <td>Segunda</td>
+                    <td>8h às 20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>8h às 20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>8h às 20h</td>
+                </tr>
+            </tbody>
+            <!--As tabelas também nos oferecem a possibilidade de juntar células e montar um visual diferente. Por exemplo, quando uma linha, que deveria ter 5 células, passa a mostrar só "uma célula".
+            Esse efeito é conseguido através da propriedade colspan=X, onde X é o número de células que você quer agrupar.-->
+        </table>
+    </main>
+
+    <footer>
+        <img src="logo-branco.png">
+        <p class="copyrights">&copy;Copyrights Barbearia Alura - 2022.
+    </footer>
+    <!--tag de rodapé-->
+</body>
+
+</html>

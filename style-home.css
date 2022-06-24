@@ -1,0 +1,171 @@
+/*body{
+    background: #CCCCCC;
+}*/
+
+header{
+    background: #BBBBBB;
+    padding: 20px 0;
+    /*espaçamento para cima e para baixo de 20px,
+    e de 0 para a direita e esquerda.*/
+}
+
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    /*aqui as margens se calcuam sozinhas, pois 
+    se eu boto 50 de um lado e 50 do outro, pode 
+    ser que numa tela de 1.300 pixels, ele não fique 
+    centralizado, se eu boto 200 de um lado e 200 
+    do outro, pode ser que numa tela de 1.000 pixels, 
+    ele não fique centralizado, por isso, a gente 
+    precisa que essa margem da direita e a margem da 
+    esquerda, elas se calculem sozinhas, elas sejam 
+    automáticas.
+    Delegamos para o navegador fazer a conta de 
+    calcular a largura que resta, dividir por dois, 
+    e adicionar metade em cada um dos lados.*/
+}
+/*essa classe está centralizando 
+o que está dentro do cabeçalho.*/
+
+nav {
+    position: absolute;
+    /*Com o position: absolute, eu consigo 
+    posicionar meu elemento em qualquer 
+    lugar da página.*/
+    top: 100px;
+    right: 0;
+}
+
+
+
+nav li{
+    /*Inline, ele só ocupa o tamanho dele.*/
+    display: inline;
+    /*aqui definiremos o espaçamento entre um item 
+    e outro através da margem. E ela é definida assim: 
+    primeiro para o topo, depois para a direita, terceiro 
+    para baixo e por ultimo para a esquerda. Como queremos 
+    aumentar somente para a esquerda, então só trocaremos 
+    o valor dessa.*/
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    /*transformando todas as letras da TAG a em 
+    maiúsculas.
+    Explicação do Teacher:
+    A propriedade text-transform é a responsável 
+    pela transformação do texto para maiúsculo, 
+    quando usamos o valor uppercase.*/
+    text-transform: uppercase;
+    color: #000000;
+    /*peso da fonte em negrito*/
+    font-weight: bold;
+    /*tamanho da fonte*/
+    font-size: 22px;
+    /*aqui retiramos o sublinhado padrão*/
+    text-decoration: none;
+
+}
+/*para mapear o comportamento dos links que estão 
+dentro do menu de navegação, quando o mouse 
+passar por cima do elemento usamos o hover, é 
+quando mouse está por cima do elemento.*/
+nav a:hover{
+    /*essa cor vai aparecer ao passar do mouse*/
+    color: #C78C19;
+     /*o sublinhado vai aparecer ao passar do mouse*/
+    text-decoration: underline;
+}
+
+
+#banner{
+    /*O width é a propriedade
+     que devemos manipular para alterar 
+     a largura do elemento.*/
+    width: 100%;
+}
+
+.principal{
+    background: #CCCCCC;
+    /*adicionando espaçamento interno para 
+    todos os lados*/
+    padding: 30px;
+}
+
+.titulo-centralizado{
+    text-align: center;
+}
+
+/*h1{
+    background: #CCCCCC;
+    text-align: center;
+}*/
+
+.paragrafo{
+    text-align: center;
+    background: #CCCCCC;
+}
+
+#missao{
+    font-size: 20px;
+}
+
+em strong{
+    color: red;
+}
+
+/*criando uma classe em css.
+A class serve para replicarmos 
+a aplicação do nosso CSS, sem 
+precisar copiar e colá-lo em vários 
+elementos. Aplicamos a classe para isso.*/
+.itens{
+    font-style: italic;
+}
+
+.beneficios{
+    background: #FFFFFF;
+    /*adicionando espaçamento interno para 
+    todos os lados*/
+    padding: 20px;
+}
+
+/*h2{
+    text-align: center;
+}*/
+
+.beneficios-itens{
+    /*O display inline block 
+    ocupa só o tamanho do conteúdo, 
+    mas me deixa mexer na largura e 
+    espaçamentos.*/
+    display: inline-block;
+    /*Neste comando, conseguimos alinhar
+    pela linha de cima*/
+    vertical-align: top;
+    /*mexendo na largura da lista*/
+    width: 20%;
+    /*com esse comando estamos aumentando
+    o espaçamento externo*/
+    margin-right: 15%;
+}
+
+.imagembeneficios {
+    width: 50%;
+}
+
+footer{
+    text-align:center;
+    /*colocanco uma imagem de fundo*/
+    background:url("bg.jpg");
+    padding:40px 0;
+}
+
+.copyrights{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin:20px 0 0;
+}

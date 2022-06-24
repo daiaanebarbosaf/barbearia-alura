@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Produtos - Barbearia Alura</title>
+        <!--A importancia do reset.css:
+        O navegador cria o estilo para todas as tags que ele acha adequadas, então precisamos removê-lo, para que o estilo que criamos não seja influenciado pelo estilo que o navegador adiciona.-->
+        <link rel="stylesheet" href="reset.css\reset.css">
+        <link rel="stylesheet" href="style-produtos.css">
+        <!--CSS importando a forte Montserrat-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <!--como clocar uma imagem no cabeçalho
+            Explicação do professor: envolve a tag 
+            da imagem, que é onde buscamos o conteúdo 
+            que será exibido.-->
+            <div class="caixa">
+                <h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+
+                <nav>
+                    <ul>
+                        <!--A TAG a, é a TAG ancora, ela leva uma página para a outra.
+                        Explicação do Professor:
+                        serve justamente como uma âncora, um link, que vai nos levar para outro ponto na internet.-->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contatos.html">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+        <main>
+            <ul class="produtos">
+                <li>
+                    <h2>Cabelo</h2>
+                    <img src="cabelo.jpg">
+                    <p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir.</p>
+                    <p class="produto-preco">R$ 25,00</p>
+                </li>
+                
+                <li>
+                    <h2>Barba</h2>
+                    <img src="barba.jpg">
+                    <p class="produto-descricao">Corte e desenho profissional de barba.</p>
+                    <p class="produto-preco">R$ 18,00</p>
+                </li>
+
+                <li>
+                    <h2>Cabelo + Barba</h2>
+                    <img src="cabelo+barba.jpg">
+                    <p class="produto-descricao">Pacote completo de cabelo e barba.</p>
+                    <p class="produto-preco">R$ 35,00</p>                    
+                </li>
+            </ul>
+        </main>
+        <!--A importancia de usar TAGs semânticas:
+            As tags semânticas fazem com que o navegador entenda melhor o nosso conteúdo, e com isso carregue melhor a nossa página.-->
+        <footer>
+            <img src="logo-branco.png">
+            <p class="copyrights">&copy;Copyrights Barbearia Alura - 2022.
+        </footer>
+        <!--tag de rodapé-->
+    </body>
+</html>

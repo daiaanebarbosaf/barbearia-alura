@@ -9,13 +9,13 @@
 :root {
   --font: 'Montserrat',
   sans-serif;
-  --primary-color:#000000;
-  --secundary-color: #b2adad;
+  --primary-color:#2C3639;
+  --secundary-color: #DCD7C9;
   --dark-color: #565656;
   --hover-color: #c78c19;
-  --text-markup: red;
+  --text-markup: #A27B5C;
   --light: white;
-  --border-active: #088C19;
+  --border-active: #A27B5C;
   --button-send: #ffa500;
   --button-send-hover: #ff8c00;
 }
@@ -311,9 +311,9 @@ form label, form legend{
 }
 
 .botao-enviar{
-  width: 40%;
+  width: 20%;
   padding: 15px 0;
-  background: var(--button-send);
+  background: var(--secundary-color);
   color: white;
   font-weight: bold;
   font-size:18px;
@@ -324,7 +324,7 @@ form label, form legend{
 }
 
 .botao-enviar:hover{
-  background: var(--button-send-hover);
+  background: var(--dark-color);
   transform:scale(1.2);
 }
 
